@@ -1,6 +1,8 @@
-//问题反馈:https://t.me/Wall_E_Channel
+/*
+2 10 20 5 * m_jd_wx_addCart.js
+ */
 let mode = __dirname.includes('magic')
-const {Env} = mode ? require('./magic') : require('./magic')
+const {Env} = mode ? require('./function/magic') : require('./function/magic')
 const $ = new Env('M加购有礼');
 $.activityUrl = process.env.M_WX_ADD_CART_URL
     ? process.env.M_WX_ADD_CART_URL
