@@ -92,12 +92,6 @@
         },
         {
             "isOpen": true,
-            "name": "众筹许愿池",
-            "envName":"wish_appIdArrList",
-            "scriptPath":"/ql/repo/Aurora209_jk_Scripts/jd_wish.js"
-        },
-        {
-            "isOpen": true,
             "name": "加购任务",
             "envName":"M_WX_ADD_CART_URL",
             "scriptPath":"/ql/repo/Aurora209_jk_Scripts/jd_wx_addCart.js"
