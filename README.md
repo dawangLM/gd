@@ -1,5 +1,5 @@
 #  监控脚本
-jk.json    替换监控文件
+jk.json    替换监控路径文件
 
 [](https://github.com/knowledgeablelmh/gd.git)
 
