@@ -1,5 +1,5 @@
 /*
-cron:1 1 1 1 *
+cron:1 1 1 1 1 1
 */
 let mode = __dirname.includes('magic')
 const {Env} = mode ? require('./utils/magic.js') : require('./utils/magic.js')
