@@ -10,7 +10,7 @@ HELP_COOKIE_NUM 助力的人数
 
 作者：小埋
 
-cron:1 1 1 1 *
+cron:1 1 1 1 1 1
 ============Quantumultx===============
 [task_local]
 #LZ分享有礼
