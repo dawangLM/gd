@@ -5,15 +5,15 @@ jd_cjhy_activityId  活动ID 必需
 jd_cjhy_activityUrl 活动地址 必需
 
 #CJ组队瓜分京豆
-3 18 28 4 * jd_cjzdgf.js, tag=CJ组队瓜分京豆, enabled=true
+1 1 1 1 1 1 jd_cjzdgf.js, tag=CJ组队瓜分京豆, enabled=true
 
 2022年5月8日由https://github.com/insoxin/解密
 
 解密附言:下列js中的如果有非京东官方服务器绝对不是我的,原作就有,不承担任何责任,有能力者可自行解密对验
 */
 
-let jd_cjhy_activityId="2584bc5fb137415c87cedbb2e56bda3c" // 活动ID
-let jd_cjhy_activityUrl="https://cjhydz-isv.isvjcloud.com" // 活动地址
+let jd_cjhy_activityId="" // 活动ID
+let jd_cjhy_activityUrl="" // 活动地址
 
 const $ = new Env('CJ组队瓜分京豆');
 
