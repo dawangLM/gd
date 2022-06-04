@@ -15,7 +15,7 @@ export comm_tasknameList="京东工业品抽奖"
 
 ================Loon==============
 [Script]
-cron "5 2,18 * * *" script-path=https://raw.githubusercontent.com/KingRan/JDJB/main/jd_joyjd_open.js,tag=JoyJd任务脚本
+cron "1 1 1 1 *" script-path=https://raw.githubusercontent.com/KingRan/JDJB/main/jd_joyjd_open.js,tag=JoyJd任务脚本
 
 ===============Surge=================
 JoyJd任务脚本 = type=cron,cronexp="5 2,18 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/KingRan/JDJB/main/jd_joyjd_open.js
@@ -56,7 +56,7 @@ if ($.isNode()) {
     }
     if (!activityIDList) {
         $.log(`没有通用ID任务，尝试获取远程`);
-        let data = await getData("https://cdn.jsdelivr.net/gh/KingRan/shareCodes@master/joyjd_open.json")
+        let data = await getData("https://gitee.com/KingRan521/JD-Scripts/raw/master/shareCodes/joyjd_open.json")
         if (data.activityIDList && data.activityIDList.length) {
             $.log(`获取到远程且有数据`);
             activityIDList = data.activityIDList.join('@')
