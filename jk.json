@@ -106,7 +106,7 @@
           "isOpen": true,
           "name": "M幸运抽奖",
           "envName":"M_WX_LUCK_DRAW_URL",
-          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_wx_luckDraw.js"
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/m_jd_wx_luckDraw.js"
         },
         {
           "isOpen": true,
