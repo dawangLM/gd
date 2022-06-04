@@ -94,7 +94,7 @@
           "isOpen": true,
           "name": "加购任务",
           "envName":"M_WX_ADD_CART_URL",
-          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_wx_addCart.js"
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/m_jd_wx_addCart.js"
         },
         {
           "isOpen": true,
