@@ -1,5 +1,5 @@
 /* 
-1 1 1 1 * jd_share.js
+1 1 1 1 1 1 jd_share.js
 注意控制ck数量
 车头数量OWN_COOKIE_NUM，默认为1
 */
