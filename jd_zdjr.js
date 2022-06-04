@@ -1,18 +1,16 @@
 /*
-const $=new Env('组队瓜分京豆')
+
 一共有2个变量
 jd_zdjr_activityId  活动ID 必需
 jd_zdjr_activityUrl 活动地址 必需
-已适配docker
-需要配合重写获取=>活动id、活动地址
-https://\w+-isv.isvjcloud.com/wxTeam/shopInfo url script-request-body jd_zdjr.js
-mitm
-1 1 19 4 * jd_zdjr.js
-*-isv.isvjcloud.com
+
+1 1 1 1 1 1 jd_zdjr.js
+
 
 2022年5月8日由https://github.com/insoxin/解密
 
 解密附言:下列js中的如果有非京东官方服务器绝对不是我的,原作就有,不承担任何责任,有能力者可自行解密对验
+
 */
 
 let jd_zdjr_activityId = ''// 活动ID
