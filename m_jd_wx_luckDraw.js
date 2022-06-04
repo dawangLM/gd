@@ -1,5 +1,5 @@
 /*
-2 10 20 5 * m_jd_wx_luckDraw.js
+1 1 1 1 1 1 m_jd_wx_luckDraw.js
  */
 let mode = __dirname.includes('magic')
 const {Env} = mode ? require('./function/magic') : require('./function/magic')
