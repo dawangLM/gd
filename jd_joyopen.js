@@ -14,7 +14,7 @@ cron:2 1 * * *
 
 */
 const $ = new Env('JOY通用开卡活动');
-const Faker=require('./sign_graphics_validate.js') 
+const Faker=require('./function/sign_graphics_validate.js') 
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let joyopen = '';
