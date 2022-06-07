@@ -54,6 +54,7 @@
           "envName":"M_WX_LUCK_DRAW_URL",
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/m_jd_wx_luckDraw.js"
         },
+        {
           "isOpen": true,
           "name": "M收藏有礼",
           "envName":"M_FAV_SHOP_ARGV",
