@@ -76,7 +76,7 @@
           "isOpen": true,
           "name": "LZ分享有礼",
           "envName":"jd_fxyl_activityId",
-          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_jd_share2.js"
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_share2.js"
         },
         {
           "isOpen": true,
