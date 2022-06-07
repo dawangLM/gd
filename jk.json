@@ -54,6 +54,11 @@
           "envName":"M_WX_LUCK_DRAW_URL",
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/m_jd_wx_luckDraw.js"
         },
+          "isOpen": true,
+          "name": "M收藏有礼",
+          "envName":"M_FAV_SHOP_ARGV",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/m_jd_fav_shop_gift.js"
+        },
         {
           "isOpen": true,
           "name": "盲盒任务抽京豆",
@@ -78,6 +83,12 @@
           "envName":"jd_fxyl_activityId",
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_share2.js"
         },
+        {
+          "isOpen": true,
+          "name": "LZ刮刮乐抽奖通用活动",
+          "envName":"jd_drawCenter_activityId",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_drawCenter.js"
+        },        
         {
           "isOpen": true,
           "name": "joy抽奖机通用",
