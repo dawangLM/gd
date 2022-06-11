@@ -86,10 +86,16 @@
         },
         {
           "isOpen": true,
+          "name": "LZ购物车锦鲤",
+          "envName":"jd_wxCartKoi_activityId",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_wxCartKoi.js"
+        },
+        {
+          "isOpen": true,
           "name": "LZ刮刮乐抽奖通用活动",
           "envName":"jd_drawCenter_activityId",
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_drawCenter.js"
-        },        
+        },
         {
           "isOpen": true,
           "name": "joy抽奖机通用",
