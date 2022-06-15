@@ -138,7 +138,6 @@
 		  "isOpen": true,
 		  "name": "微定制瓜分京豆",
 		  "envName":"jd_wdz_activityId",
-		  "envName":"jd_wdz_activityUrl",
 		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_team60.js"
 		},
 		{
