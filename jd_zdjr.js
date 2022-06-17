@@ -1,27 +1,31 @@
 /*
-
+const $=new Env('LZ组队瓜分京豆')
 一共有2个变量
 jd_zdjr_activityId  活动ID 必需
 jd_zdjr_activityUrl 活动地址 必需
-
+已适配docker
+需要配合重写获取=>活动id、活动地址
+https://\w+-isv.isvjcloud.com/wxTeam/shopInfo url script-request-body jd_zdjr.js
+mitm
 1 1 1 1 1 1 jd_zdjr.js
+*-isv.isvjcloud.com
 
+Fix by HarbourJ, 2022.06.15
+TG: https://t.me/HarbourToulu
 
 2022年5月8日由https://github.com/insoxin/解密
-
 解密附言:下列js中的如果有非京东官方服务器绝对不是我的,原作就有,不承担任何责任,有能力者可自行解密对验
-
 */
 
-let jd_zdjr_activityId = ''// 活动ID
-let jd_zdjr_activityUrl = ''// 活动地址
+let jd_zdjr_activityId = '0c50cfa7551e475d93ae4c3ad612dbcb'// 活动ID
+let jd_zdjr_activityUrl = 'https://lzkjdz-isv.isvjcloud.com'// 活动地址
 
-const $=new Env('组队瓜分京豆');
+const $=new Env('LZ组队瓜分京豆');
 const notify=$.isNode()?require('./sendNotify'):'';
 const jdCookieNode=$.isNode()?require('./jdCookie.js'):'';
 let cookiesArr=[],cookie='',message='',messageTitle='';
-activityId=$.getdata('jd_smiek_zdjr_activityId')?$.getdata('jd_smiek_zdjr_activityId'):jd_zdjr_activityId;
-activityUrl=$.getdata('jd_smiek_zdjr_activityUrl')?$.getdata('jd_smiek_zdjr_activityUrl'):jd_zdjr_activityUrl;
+activityId=$.getdata('jd_zdjr_activityId')?$.getdata('jd_zdjr_activityId'):jd_zdjr_activityId;
+activityUrl=$.getdata('jd_zdjr_activityUrl')?$.getdata('jd_zdjr_activityUrl'):jd_zdjr_activityUrl;
 let activityCookie='';
 if($.isNode()){
 	if(process.env.jd_zdjr_activityId)activityId=process.env.jd_zdjr_activityId;
@@ -92,11 +96,13 @@ async function jrzd(){
 	$.saveTeam=false;
 	await getCk();
 	await getshopInfo();
+	await $.wait(1000);
 	if($.sid&&$.userId){
 		await getToken();
 		if($.Token)await getPin();
 		console.log('pin:'+$.Pin);
 		await getUserInfo();
+		await $.wait(1000);
 		await getTeam();
 		await $.wait(1000);
 		if($.maxTeam){
@@ -250,7 +256,8 @@ function joinShop(){
 							if(_0x1ac107.data.openCardLink){
 								let _0x2b47ad=_0x1ac107.data.openCardLink.match(/channel=(\d+)/);
 								const _0x326ed3={'venderId':$.userId,'shopId':$.sid,'bindByVerifyCodeFlag':1,'registerExtend':{},'writeChildFlag':0,'channel':_0x2b47ad[1]};
-								let _0x1324f5='https://api.m.jd.com/client.action?appid=jd_shop_member&functionId=bindWithVender&body='+encodeURIComponent(JSON.stringify(_0x326ed3))+'&client=H5&clientVersion=9.2.0&uuid=88888&jsonp=jsonp_1613718333317_54489';
+								let h5st='20220614090341726%3B0284392757226553%3Bef79a%3Btk02wcbf51cf018njrSeb2PERKoZxKtLTPV0g0paq33tkJwK4bJurufnMpBuFkn4RVxkfBmwRhN8VRd%2BB2q%2BrzaXvMR7%3B775673aed4a823ebbe0003522fffd49e329ba7842f8ad82e5099117cd00d871e%3B3.0%3B1655168621726'
+								let _0x1324f5='https://api.m.jd.com/client.action?appid=jd_shop_member&functionId=bindWithVender&body='+encodeURIComponent(JSON.stringify(_0x326ed3))+'&client=H5&clientVersion=9.2.0&uuid=88888&h5st='+h5st;
 								let _0x21c3ee=''+_0x1ac107.data.openCardLink;
 								await jiaru(_0x1324f5,_0x21c3ee);
 							}
