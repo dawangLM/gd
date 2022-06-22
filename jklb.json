@@ -148,6 +148,12 @@
 		},
 		{
 		  "isOpen": true,
+		  "name": "集卡抽奖通用活动",
+		  "envName":"jd_wxCollectCard_activityId",
+		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_wxCollectCard.js"
+		},
+		{
+		  "isOpen": true,
 		  "name": "电脑配件",
 		  "envName": "computer_activityId",
 		  "scriptPath": "/ql/repo/knowledgeablelmh_gd/jd_computer.js"
