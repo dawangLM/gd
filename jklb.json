@@ -154,6 +154,12 @@
 		},
 		{
 		  "isOpen": true,
+		  "name": "粉丝互动通用活动",
+		  "envName":"jd_wxFansInterActionActivity_activityId",
+		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_wxFansInterActionActivity.js"
+		},
+		{
+		  "isOpen": true,
 		  "name": "电脑配件",
 		  "envName": "computer_activityId",
 		  "scriptPath": "/ql/repo/knowledgeablelmh_gd/jd_computer.js"
