@@ -98,6 +98,12 @@
         },
         {
           "isOpen": true,
+          "name": "LZ关注抽奖通用活动",
+          "envName":"jd_wxShopFollowActivity_activityId",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_wxShopFollowActivity.js"
+        },      
+        {
+          "isOpen": true,
           "name": "joy抽奖机通用",
           "envName": "JD_Lottery",
           "scriptPath": "/ql/data/repo/knowledgeablelmh_gd/jd_lottery.js"
