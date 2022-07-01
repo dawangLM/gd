@@ -77,7 +77,7 @@
 		  "name": "分享有礼",
 		  "envName":"SHARE_ACTIVITY_ID",
 		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_share.js"
-		},
+		},        
 		{
 		  "isOpen": true,
 		  "name": "LZ分享有礼",
@@ -101,7 +101,7 @@
 		  "name": "LZ关注抽奖通用活动",
 		  "envName":"jd_wxShopFollowActivity_activityId",
 		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_wxShopFollowActivity.js"
-		},
+		},      
 		{
 		  "isOpen": true,
 		  "name": "joy抽奖机通用",
@@ -175,6 +175,13 @@
 		  "name": "超级无线店铺签到",
 		  "envName":"SEVENDAY_LIST",
 		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_sevenDay.js"
+		},
+		{
+		  "isOpen": true,
+		  "name": "邀好友赢大礼",
+		  "envName":"yhyactivityId",
+		  "envName":"yhyauthorCode",
+		  "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_yqhy.py"
 		},
 		{
 		  "isOpen": true,
