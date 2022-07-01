@@ -57,6 +57,8 @@ async def jcmd(event):
                    msg = f'M加购任务变量\nexport M_WX_ADD_CART_URL="{jump_url}"'
         elif re.findall("https://cjhy-isv.isvjcloud.com/wxDrawActivity/activity/867591", data['jumpUrl']):
                    msg = f'M转盘抽奖变量\nexport M_WX_LUCK_DRAW_URL="{jump_url}"'
+         elif re.findall("cjwx/common/entry.html", data['jumpUrl']):
+                   msg = f'M转盘抽奖变量\nexport M_WX_LUCK_DRAW_URL="{jump_url}"'
         elif re.findall("https://lzkj-isv.isvjcloud.com/wxgame/activity", data['jumpUrl']):
                    msg = f'通用游戏变量\nexport WXGAME_ACT_ID="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxShareActivity", data['jumpUrl']):
