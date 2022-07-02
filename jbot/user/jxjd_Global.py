@@ -34,7 +34,7 @@ async def jcmd(event):
         await user.send_message(event.chat_id,'请指定要解析的口令,格式: jx 口令 或对口令直接回复jx ')
         return    
         
-    data = requests.post("http://158.101.153.139:19840/jCommand",
+    data = requests.post("http://ailoveu.eu.org:19840/jCommand",
                              headers=headers,
                              json={"code": strText}).json()
     code = data.get("code")
@@ -42,43 +42,42 @@ async def jcmd(event):
         data = data["data"]
         title = data["title"]
         jump_url = data["jumpUrl"]
-        url = re.findall("https://(.*?)/", data['jumpUrl'])
         activateId = re.findall("activityId=(.*?)&", data['jumpUrl'])
         code = re.findall("code=(.*?)&", data['jumpUrl'])
         if re.findall("https://cjhydz-isv.isvjcloud.com/wxTeam/activity", data['jumpUrl']):
-                   msg = f'CJ组队瓜分变量\nexport jd_cjhy_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【CJ组队瓜分变量】\nexport jd_cjhy_activityId="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxTeam/activity", data['jumpUrl']):
-                   msg = f'LZ组队瓜分变量\nexport jd_zdjr_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【LZ组队瓜分变量】\nexport jd_zdjr_activityId="{activateId[0]}"'
         elif re.findall("https://cjhydz-isv.isvjcloud.com/microDz/invite/activity/wx/view/index/8882761", data['jumpUrl']):
-                   msg = f'微定制瓜分变量\nexport jd_wdz_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【微定制瓜分变量】\nexport jd_wdz_activityId="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxShareActivity/activity/6432842", data['jumpUrl']):
-                   msg = f'LZ分享有礼变量\nexport jd_fxyl_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【LZ分享有礼变量】\nexport jd_fxyl_activityId="{activateId[0]}"'
         elif re.findall("https://lzkj-isv.isvjd.com/wxCollectionActivity/activity2", data['jumpUrl']):
-                   msg = f'M加购任务变量\nexport M_WX_ADD_CART_URL="{jump_url}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【M加购任务变量】\nexport M_WX_ADD_CART_URL="{jump_url}"'
         elif re.findall("https://cjhy-isv.isvjcloud.com/wxDrawActivity/activity/867591", data['jumpUrl']):
-                   msg = f'M转盘抽奖变量\nexport M_WX_LUCK_DRAW_URL="{jump_url}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【M转盘抽奖变量】\nexport M_WX_LUCK_DRAW_URL="{jump_url}"'
         elif re.findall("cjwx/common/entry.html", data['jumpUrl']):
-                   msg = f'M转盘抽奖变量\nexport M_WX_LUCK_DRAW_URL="{jump_url}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【M转盘抽奖变量】\nexport M_WX_LUCK_DRAW_URL="{jump_url}"'
         elif re.findall("https://lzkj-isv.isvjcloud.com/wxgame/activity", data['jumpUrl']):
-                   msg = f'通用游戏变量\nexport WXGAME_ACT_ID="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【通用游戏变量】\nexport WXGAME_ACT_ID="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxShareActivity", data['jumpUrl']):
-                   msg = f'kr分享有礼变量\nexport jd_fxyl_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【kr分享有礼变量】\nexport jd_fxyl_activityId="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxSecond", data['jumpUrl']):
-                   msg = f'读秒变量\nexport jd_wxSecond_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【读秒变量】\nexport jd_wxSecond_activityId="{activateId[0]}"'
         elif re.findall("https://jinggengjcq-isv.isvjcloud.com", data['jumpUrl']):
-                   msg = f'大牌联合开卡变量\nexport DPLHTY="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【大牌联合开卡变量】\nexport DPLHTY="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxCollectCard", data['jumpUrl']):
-                   msg = f'集卡抽奖变量\nexport jd_wxCollectCard_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【集卡抽奖变量】\nexport jd_wxCollectCard_activityId="{activateId[0]}"'
         elif re.findall("https://lzkj-isv.isvjd.com/drawCenter", data['jumpUrl']):
-                   msg = f'LZ刮刮乐抽奖变量\nexport jd_drawCenter_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n 【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【LZ刮刮乐抽奖变量】\nexport jd_drawCenter_activityId="{activateId[0]}"'
         elif re.findall("https://lzkjdz-isv.isvjcloud.com/wxFansInterActionActivity", data['jumpUrl']):
-                   msg = f'LZ粉丝互动变量\nexport jd_wxFansInterActionActivity_activityId="{activateId[0]}"'
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n 【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【LZ粉丝互动变量】\nexport jd_wxFansInterActionActivity_activityId="{activateId[0]}"'
         elif re.findall("https://prodev.m.jd.com/mall/active/dVF7gQUVKyUcuSsVhuya5d2XD4F", data['jumpUrl']):
-                   msg = f'邀好友赢大礼变量\nexport yhyauthorCode="{code[0]}"'                   
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n 【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【邀好友赢大礼变量】\nexport yhyauthorCode="{code[0]}"'                   
         elif re.findall("https://lzkj-isv.isvjcloud.com/wxShopFollowActivity", data['jumpUrl']):
-                   msg = f'关注抽奖变量\nexport jd_wxShopFollowActivity_activityId="{activateId[0]}"'                      
+                   msg = f'【活动名称】 {data["title"]}\n【分享来自】 ({data["userName"]})\n【活动链接】 [长按复制]({data["jumpUrl"]})\n 【快捷跳转】 [点击跳转](https://api1.windfgg.cf/jd/jump?url={data["jumpUrl"]})\n【关注抽奖变量】\nexport jd_wxShopFollowActivity_activityId="{activateId[0]}"'                      
         else:
                    msg = "未检测到组队信息"
-        await user.send_message(event.chat_id,title+"\n连接："+jump_url+"\n"+msg)
+        await user.send_message(event.chat_id,msg)
     else:
         await user.send_message(event.chat_id,"解析出错:"+data.get("data"))
