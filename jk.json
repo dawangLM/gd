@@ -184,6 +184,12 @@
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_yqhy.py"
         },
         {
+            "isOpen": true,
+            "name": "邀好友赢大礼2",
+            "envName":"jd_inv_authorCode",
+            "scriptPath":"/ql/data/scripts/knowledgeablelmh_gd/jd_inviteFriendsGift.py"
+        },
+        {
           "isOpen": true,
           "name": "PKC关注有礼",
           "envName":"PKC_GZYL",
