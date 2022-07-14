@@ -195,7 +195,7 @@
             "isOpen": true,
             "name": "邀好友赢大礼2",
             "envName":"jd_inv_authorCode",
-            "scriptPath":"/ql/data/scripts/knowledgeablelmh_gd/jd_inviteFriendsGift.py"
+            "scriptPath":"/ql/repo/knowledgeablelmh_gd/jd_inviteFriendsGift.py"
         },
         {
           "isOpen": true,
