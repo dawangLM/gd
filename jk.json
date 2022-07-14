@@ -172,6 +172,12 @@
         },
         {
           "isOpen": false,
+          "name": "LZ让福袋飞通用活动",
+          "envName": "jd_wxUnPackingActivity_activityId",
+          "scriptPath": "/ql/data/repo/knowledgeablelmh_gd/jd_wxUnPackingActivity.js"
+        },
+        {
+          "isOpen": false,
           "name": "超级无线店铺签到",
           "envName":"SEVENDAY_LIST",
           "envName":"SEVENDAY_LIST2",
