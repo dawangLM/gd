@@ -62,6 +62,12 @@
         },
         {
           "isOpen": true,
+          "name": "M店铺会员",
+          "envName":"jrhy_id",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_dphy.js"
+        },
+        {
+          "isOpen": true,
           "name": "盲盒任务抽京豆",
           "envName": "jd_mhurlList",
           "scriptPath": "/ql/data/repo/knowledgeablelmh_gd/jd_mhtask.js"
@@ -83,6 +89,12 @@
           "name": "LZ分享有礼",
           "envName":"jd_fxyl_activityId",
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_share2.js"
+        },
+        {
+          "isOpen": true,
+          "name": "LZ加购有礼",
+          "envName":"jd_lzaddCart_activityId",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_lzaddCart.js"
         },
         {
           "isOpen": true,
