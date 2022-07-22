@@ -1,5 +1,5 @@
 from telethon import events
-from .login import user
+from .. import user
 from .. import jdbot
 from ..diy.utils import read, write
 import re
