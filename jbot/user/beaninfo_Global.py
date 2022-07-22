@@ -2,8 +2,7 @@
 
 
 from telethon import events, Button
-from .login import user
-
+from .. import user
 from .. import jdbot
 from ..bot.utils import cmd, TASK_CMD,split_list, press_event
 from ..diy.utils import read, write
