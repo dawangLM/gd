@@ -199,15 +199,14 @@
         {
           "isOpen": true,
           "name": "邀好友赢大礼",
-          "envName":"yhyactivityId",
           "envName":"yhyauthorCode",
           "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_yqhy.py"
         },
         {
-            "isOpen": true,
-            "name": "邀好友赢大礼2",
-            "envName":"jd_inv_authorCode",
-            "scriptPath":"/ql/data/knowledgeablelmh_gd/jd_inviteFriendsGift.py"
+          "isOpen": true,
+          "name": "邀好友赢大礼2",
+          "envName":"jd_inv_authorCode",
+          "scriptPath":"/ql/data/repo/knowledgeablelmh_gd/jd_inviteFriendsGift.py"
         },
         {
           "isOpen": true,
