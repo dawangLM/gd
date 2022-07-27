@@ -11,7 +11,7 @@ const $ = new Env('京豆详情统计');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let allMessage = '';
 let myMap = new Map();
-let allBean = 10;
+let allBean = 0;
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
 if ($.isNode()) {
@@ -25,7 +25,7 @@ if ($.isNode()) {
 
 let intcheckckseq=999999;
 let strcheckck = process.env.BOTCHECKCODE;
-let lnShowTop = 0;
+let lnShowTop = 10;
 if(!strcheckck){
 	console.log("【账号�】没有获取到要查询的账号");
 	return
