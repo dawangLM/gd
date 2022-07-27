@@ -5,7 +5,7 @@
  
 [task_local]
 #京豆详情统计
-20 22 * * * jd_bean_info.js, tag=京豆详情统计, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+1 1 1 1 1 1 jd_bean_info.js, tag=京豆详情统计, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
  * */
 const $ = new Env('京豆详情统计');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -25,7 +25,7 @@ if ($.isNode()) {
 
 let intcheckckseq=999999;
 let strcheckck = process.env.BOTCHECKCODE;
-let lnShowTop = 10;
+let lnShowTop = 0;
 if(!strcheckck){
 	console.log("【账号�】没有获取到要查询的账号");
 	return
@@ -139,7 +139,7 @@ async function bean() {
       if (detailList && detailList.length > 0) {
         for (let item of detailList) {
           const date = item.date.replace(/-/g, '/') + "+08:00";
-          if (new Date(date).getTime() >= tm1 && (!item['eventMassage'].includes("退还") && !item['eventMassage'].includes('扣赠'))) {
+          if (new Date(date).getTime() >= tm1 && (!item['eventMassage'].includes("退还")  && !item['eventMassage'].includes("物流") && !item['eventMassage'].includes('扣赠'))) {
             todayArr.push(item);
           } else if (tm > new Date(date).getTime()) {            
             t = 1;
