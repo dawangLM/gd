@@ -1,21 +1,13 @@
 /*
-入会开卡领取礼包(通用)
 
-自用，拉库请自行禁用
+1 1 1 1 * jd_dphy.js, tag=M店铺会员, enabled=true
 
-使用环境变量 VENDER_ID 提供 venderid，多个用&连接
+使用环境变量 VENDER_ID 提供 VENDER_ID，多个用&连接
 脚本大部分内容包括加密部分代码提取自 smiek2121 的开卡脚本
-
-变量：
-## 入会开卡
-//export VENDER_ID=""
-## 最小入会值 （默认5）
-1 1 1 1 1 1 jd_OpenCard_Force.js, tag=入会开卡领取礼包(通用), enabled=true
-
 
 */
 
-const $ = new Env('入会开卡领取礼包');
+const $ = new Env('M店铺会员');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 //IOS等用户直接用NobyDa的jd cookie
@@ -23,7 +15,6 @@ CryptoScripts()
 $.CryptoJS = $.isNode() ? require('crypto-js') : CryptoJS;
 var timestamp = new Date().getTime()
 const VENDER_ID = process.env.VENDER_ID || "";
-const OPENCARD_BEAN = process.env.OPENCARD_BEAN || "5";
 
 let cookiesArr = [],
     cookie = '';
@@ -58,9 +49,6 @@ message = '';
       console.log(`\n******开始【京东账号${$.index}】${$.UserName}*********\n`);
       await getUA()
       await run();
-	  //if ($.openCardBean === 0 || $.openCardBean < OPENCARD_BEAN) {
-      //break;
-	  //}
     }
   }
   if(allMessage){
@@ -168,11 +156,8 @@ function joinShop() {
     if ($.openCardStatus) {
       console.log(`已经是会员了~`);
       resolve();
-    } else if ($.openCardBean === 0) {
+    } else if (false) {
       console.log('查询该店入会没有送豆，不入会');
-      resolve();
-    } else if ($.openCardBean < OPENCARD_BEAN) {
-      console.log(`入会送【${$.openCardBean}】豆少于【${OPENCARD_BEAN}豆】,不入...`)
       resolve();
     } else {
       let body = `{"venderId":"${$.joinVenderId}","shopId":"${$.joinVenderId}","bindByVerifyCodeFlag":1,"registerExtend":{},"writeChildFlag":0${activityId},"channel":401}`
