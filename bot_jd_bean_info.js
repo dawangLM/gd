@@ -11,7 +11,7 @@ const $ = new Env('京豆详情统计');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let allMessage = '';
 let myMap = new Map();
-let allBean = 0;
+let allBean = 10;
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
 if ($.isNode()) {
